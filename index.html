@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Cool Popup UI</title>
+  </head>
+  <body>
+    <button onclick="toggleModal()" type="button">Open Modal</button>
+
+    <div class="modal-background" onclick="toggleModal()"></div>
+
+    <div class="modal">
+      <h2>Modal window</h2>
+
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat animi
+        eum accusantium non quasi sit consequatur tempora dolores reprehenderit
+        optio?
+      </p>
+    </div>
+    <script>
+      const toggleModal = () => {
+        const bodyClassList = document.body.classList;
+        if (bodyClassList.contains("open")) {
+          bodyClassList.remove("open");
+          bodyClassList.add("closed");
+        } else {
+          bodyClassList.remove("closed");
+          bodyClassList.add("open");
+        }
+      };
+    </script>
+  </body>
+</html>
